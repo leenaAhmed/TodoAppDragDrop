@@ -43,12 +43,14 @@ function dragdrop() {
 const btn = document.querySelectorAll("[data-target]");
 const close_btn = document.querySelectorAll(".close-modal");
 const overlay = document.querySelector("#overlay");
+
 btn.forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelector(btn.dataset.target).classList.add("active");
     overlay.classList.add("active");
   });
 });
+
 close_btn.forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelector(btn.dataset.target).classList.remove("active");
@@ -70,6 +72,7 @@ function createTodo() {
   const divTodo = document.createElement("div");
   const inputValue = document.getElementById("todo_input").value;
   const text = document.createTextNode(inputValue);
+
   divTodo.appendChild(text);
   divTodo.classList.add("todos");
   divTodo.setAttribute("draggable", "true");
