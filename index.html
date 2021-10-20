@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylee.css" />
+    <title>todoDrag and drop</title>
+  </head>
+  <body>
+    <!-- model -->
+    <div class="model" id="todo_form">
+      <div class="header">
+        <div class="title">Add Todo</div>
+        <button class="btn close-modal" data-target="#todo_form">
+          &times;
+        </button>
+      </div>
+      <div class="body">
+        <input type="text" id="todo_input" placeholder="add todo" />
+        <input type="submit" value="Add Todo" id="todo_submit" />
+      </div>
+    </div>
+    <!-- todos -->
+    <div class="container">
+      <div class="status" id="AddValue">
+        <h2>No status</h2>
+        <button id="add_btn" data-target="#todo_form">+ Add Todo</button>
+        <div class="todos" draggable="true">
+          installing mongo database
+          <span class="close">&times;</span>
+        </div>
+      </div>
+      <div class="status">
+        <h2>Not Started</h2>
+      </div>
+      <div class="status">
+        <h2>In progress</h2>
+      </div>
+      <div class="status">
+        <h2>complete</h2>
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
